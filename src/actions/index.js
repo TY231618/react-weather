@@ -10,6 +10,8 @@ export function fetchWeather(city) {
 
   const url = `${ROOT_URL}${city},us&appid=${API_KEY}`;
 
+  //redux-promise makes this code look synchronous when its not, the preomise which this request returns gets
+  // handled by redux-promise which sends a new action to the reducers when original promise is resolved
   const request = axios.get(url);
 
   return {
