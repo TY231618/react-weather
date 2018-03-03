@@ -9,6 +9,9 @@ export default (state = [], action) => {
 
     // doesnt mutate original state creates a new array with added city data
     return state.concat([action.payload.data]);
+
+    // return just one and removes on new search
+    // return [action.payload.data];
     // es6 way 
     // return [action.payload.data, ...state];
   }
