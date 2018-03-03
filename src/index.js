@@ -15,10 +15,7 @@ const composeMiddleware = compose(
   ),
   devToolsExtension()
 );
-const store = createStore(reducers, {}, composeMiddleware)
-
-// const createStoreWithMiddleware = compose(applyMiddleware(ReduxPromise), [devToolsExtension()])(createStore);
-
+const store = createStore(reducers, {}, composeMiddleware);
 
 ReactDOM.render(
   <Provider store={store}>
