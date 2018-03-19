@@ -18,8 +18,13 @@ class MovieReviewList extends React.Component {
 
     return _.map(this.props.reviews, (review) => {
       return review.results.map((a) => {
+        console.log(a)
+
         return (
-          <li className="list-group-item">{ a.display_title }: { a.summary_short }</li>
+          <li className="list-group-item">
+            <strong>{ a.display_title }</strong>: { a.summary_short }
+            <img src={a.multimedia.src} />
+          </li>
         )
       });
     });
@@ -41,7 +46,7 @@ class MovieReviewList extends React.Component {
             Click to show reviews
           </button>
 
-          <ul className="list-group">
+          <ul className="list-group list-group-flush">
             { !this.state.isHidden && this.renderMovieReviews() }
           </ul>
         </div>
