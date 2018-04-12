@@ -28,9 +28,9 @@ export default class SearchBar extends React.Component {
   render() {
     return (
       <form onSubmit={ this.onFormSubmit } className="input-group">
-        <input 
-          placeholder="Get a five day forcast for your favourite cities"
-          className="form-control"
+        <input
+          placeholder="Get a five day forcast for your favourite US cities"
+          className="form-control center"
           value={ this.state.term }
           onChange={ this.onInputChange }
         />
